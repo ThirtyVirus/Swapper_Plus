@@ -20,7 +20,7 @@ public class MainPluginCommand implements CommandExecutor{
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         // verify that the user has proper permissions
-        if (!sender.hasPermission("template.user")) {
+        if (!sender.hasPermission("swapper.user")) {
             Utilities.warnPlayer(sender, Arrays.asList(main.getPhrase("no-permissions-message")));
             return true;
         }
@@ -37,12 +37,13 @@ public class MainPluginCommand implements CommandExecutor{
 
                 // put plugin specific commands here
                 case "doit":
+                    if (sender.hasPermission("swapper.admin")) reload(sender);
                     main.doSwap = !main.doSwap;
                     sender.sendMessage("doing swap: " + main.doSwap);
                     break;
 
                 case "reload":
-                    if (sender.hasPermission("template.admin")) reload(sender);
+                    if (sender.hasPermission("swapper.admin")) reload(sender);
                     else Utilities.warnPlayer(sender, Arrays.asList(main.getPhrase("no-permissions-message")));
                     break;
                 default:
