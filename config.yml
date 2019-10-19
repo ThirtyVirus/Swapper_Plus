@@ -1,0 +1,19 @@
+# SwapperPlus for Craftbukkit / Spigot
+# Author: Brandon (ThirtyVirus) Calabrese
+#
+# YouTube:      https://www.youtube.com/thirtyvirus
+# Twitter:      https://twitter.com/thirtyvirus
+# SpigotMC:     https://www.spigotmc.org/members/179587/
+
+# FILE: config.yml
+# These are the settings for SwapperPlus. Change whatever you like but do not remove any
+# non-comment lines, as this will result in errors.
+
+plugin-prefix: "&c&l[&5&lSwapperPlus&c&l] &8&l"
+
+# the usernames of the people being teleported
+player-1: thirtyvirus
+player-2: fizfez
+
+# the maximum seconds between tp
+maximum-seconds: 120
